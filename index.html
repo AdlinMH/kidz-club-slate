@@ -286,7 +286,7 @@
   color: #859900;
 }
     </style>
-    <link href="stylesheets/screen-c9d8fa83.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/screen-bc0bfc7e.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
       <script src="javascripts/all-b12a2749.js"></script>
 
@@ -317,6 +317,9 @@
               <ul class="toc-list-h2">
                   <li>
                     <a href="#post-login" class="toc-h2 toc-link" data-title="POST: Login">POST: Login</a>
+                  </li>
+                  <li>
+                    <a href="#post-register" class="toc-h2 toc-link" data-title="POST: Register">POST: Register</a>
                   </li>
               </ul>
           </li>
@@ -349,22 +352,80 @@
 <blockquote>
 <p>Example Response:</p>
 </blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer eyJhbGciOiJIXVCJ9.eyJ1c2VySWQiOiAyNGE0NGEwYjBlOT"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Randy"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"lastname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"M"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6039da4f64ca9f4e91cae373"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"lastSeenAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-12-31T03:41:49.365Z"</span><span class="p">,</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Please</span><span class="w"> </span><span class="err">remove</span><span class="w"> </span><span class="err">this</span><span class="w">
+      </span><span class="nl">"lastLoginAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-12-31T03:41:49.365Z"</span><span class="p">,</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Please</span><span class="w"> </span><span class="err">remove</span><span class="w"> </span><span class="err">this</span><span class="w">
+      </span><span class="nl">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5f0ec6af024a44a0b0e90159"</span><span class="p">,</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Please</span><span class="w"> </span><span class="err">remove</span><span class="w"> </span><span class="err">this</span><span class="w">
+      </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"randymuhroji@gmail.com"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"lastLoginIp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"140.213.229.117"</span><span class="p">,</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Please</span><span class="w"> </span><span class="err">remove</span><span class="w"> </span><span class="err">this</span><span class="w">
+      </span><span class="nl">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-12-31T03:41:49.365Z"</span><span class="p">,</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Please</span><span class="w"> </span><span class="err">remove</span><span class="w"> </span><span class="err">this</span><span class="w">
+      </span><span class="nl">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Please</span><span class="w"> </span><span class="err">remove</span><span class="w"> </span><span class="err">this</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5f0ec6af024a44a0b0e90159"</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Please</span><span class="w"> </span><span class="err">remove</span><span class="w"> </span><span class="err">this</span><span class="w">
+    </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+  </span><span class="nl">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p><code>/front/v2/login</code></p>
+<h3 id='body-request'>Body Request</h3>
+<aside class="white">
+{
+  <br /><space /><strong>"email"</strong>: string
+  <br /><space /><strong>"password"</strong>: string
+  <br /><space /><strong>"notificationToken"</strong>: null
+  <br />
+}
+</aside>
+<h3 id='response'>Response</h3>
+<aside class="white">
+{
+  <br /><space /><strong>"data"</strong>: {
+  <br /><space /><strong><space />"token"</strong>: string,
+  <br /><space /><strong><space />"user"</strong>: {
+  <br /><space /><strong><space /><space />"firstname"</strong>: string,
+  <br /><space /><strong><space /><space />"lastname"</strong>: string,
+  <br /><space /><strong><space /><space />"avatar"</strong>: string,
+  <br /><space /><strong><space /><space />"email"</strong>: string,
+  <br /><space />}
+  },
+  <br /><space /><strong>"success"</strong>: true,
+  <br /><space /><strong>"error"</strong>: null,
+  <br /><space /><strong>"msg"</strong>: ""
+<br />}
+</aside>
+
+<aside class="white">
+{
+  <br /><space /><strong>"email"</strong>: string
+  <br /><space /><strong>"password"</strong>: string
+  <br /><space /><strong>"notificationToken"</strong>: string | null
+  <br />
+}
+</aside>
+<h2 id='post-register'>POST: Register</h2>
+<blockquote>
+<p>Example Request:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"childName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Randy Junior"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"parentName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Randy Muhroji"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"parentEmail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"randy@elemes.id"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"q"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"notificationToken"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Example Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre></div><h3 id='http-request'>HTTP Request</h3>
 <p><code>POST /front/v2/login</code></p>
 <h3 id='body'>Body</h3>
