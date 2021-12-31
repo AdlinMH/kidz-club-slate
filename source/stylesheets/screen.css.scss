@@ -477,6 +477,14 @@ html, body {
     &.success {
       background-color: $aside-success-bg;
     }
+
+    &.white {
+      background-color: $aside-white-bg;
+    }
+
+    space {
+      margin-left: 1.3em;
+    }
   }
 
   aside:before {

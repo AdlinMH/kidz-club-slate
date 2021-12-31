@@ -30,6 +30,7 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
 
 # Authentication
 
+
 ## POST: Login
 
 > Example Request:
@@ -45,22 +46,90 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
 > Example Response:
 
 ```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
+{
+  "data": {
+    "token": "Bearer eyJhbGciOiJIXVCJ9.eyJ1c2VySWQiOiAyNGE0NGEwYjBlOT",
+    "user": {
+      "firstname": "Randy",
+      "lastname": "M",
+      "avatar": "6039da4f64ca9f4e91cae373",
+      "lastSeenAt": "2021-12-31T03:41:49.365Z", // Please remove this
+      "lastLoginAt": "2021-12-31T03:41:49.365Z", // Please remove this
+      "_id": "5f0ec6af024a44a0b0e90159", // Please remove this
+      "email": "randymuhroji@gmail.com",
+      "lastLoginIp": "140.213.229.117", // Please remove this
+      "updatedAt": "2021-12-31T03:41:49.365Z", // Please remove this
+      "deleted": false, // Please remove this
+      "id": "5f0ec6af024a44a0b0e90159" // Please remove this
+    }
   },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
+  "success": true,
+  "error": null,
+  "msg": ""
+}
+```
+
+`/front/v2/login`
+
+### Body Request
+
+<aside class="white">
+{
+  <br /><space /><strong>"email"</strong>: string
+  <br /><space /><strong>"password"</strong>: string
+  <br /><space /><strong>"notificationToken"</strong>: null
+  <br />
+}
+</aside>
+
+### Response
+
+<aside class="white">
+{
+  <br /><space /><strong>"data"</strong>: {
+  <br /><space /><strong><space />"token"</strong>: string,
+  <br /><space /><strong><space />"user"</strong>: {
+  <br /><space /><strong><space /><space />"firstname"</strong>: string,
+  <br /><space /><strong><space /><space />"lastname"</strong>: string,
+  <br /><space /><strong><space /><space />"avatar"</strong>: string,
+  <br /><space /><strong><space /><space />"email"</strong>: string,
+  <br /><space />}
+  },
+  <br /><space /><strong>"success"</strong>: true,
+  <br /><space /><strong>"error"</strong>: null,
+  <br /><space /><strong>"msg"</strong>: ""
+<br />}
+</aside>
+
+<aside class="white">
+{
+  <br /><space /><strong>"email"</strong>: string
+  <br /><space /><strong>"password"</strong>: string
+  <br /><space /><strong>"notificationToken"</strong>: string | null
+  <br />
+}
+</aside>
+
+
+
+## POST: Register
+
+> Example Request:
+
+```json
+{
+  "childName": "Randy Junior",
+	"parentName": "Randy Muhroji",
+  "parentEmail": "randy@elemes.id",
+	"password": "q",
+  "notificationToken": null
+}
+```
+
+> Example Response:
+
+```json
+
 ```
 
 ### HTTP Request
