@@ -24,6 +24,36 @@ meta:
 Welcome to the KidzClub API! You can use our API to access KidzClub API endpoints. You can view code examples in the dark area to the right.
 
 
+# Universal Response
+> Example Response:
+
+```json
+{
+  "data": null,
+  "success": true,
+  "error": null,
+  "msg": ""
+}
+```
+### Schema
+
+<aside class="white">
+{
+  <br /><space /><strong>"data"</strong>: any | array | object | string,
+  <br /><space /><strong>"success"</strong>: boolean,
+  <br /><space /><strong>"error"</strong>: ErrorObject | null,
+  <br /><space /><strong>"msg"</strong>: string
+<br />}
+</aside>
+
+### ErrorObject Schema
+<aside class="white">
+{<br /><space /><strong>"statusCode"</strong>:?: number | string,
+<br /><space /><strong>"error"</strong>:?: string,
+<br /><space /><strong>"message"</strong>:?: string
+<br />}
+</aside>
+
 
 
 
@@ -69,20 +99,20 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
 }
 ```
 
-`/front/v2/login`
+`POST /front/v2/login`
 
-### Body Request
+### Request Schema
 
 <aside class="white">
 {
   <br /><space /><strong>"email"</strong>: string
   <br /><space /><strong>"password"</strong>: string
-  <br /><space /><strong>"notificationToken"</strong>: null
+  <br /><space /><strong>"notificationToken"</strong>: string | null
   <br />
 }
 </aside>
 
-### Response
+### Response Schema
 
 <aside class="white">
 {
@@ -95,20 +125,12 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
   <br /><space /><strong><space /><space />"email"</strong>: string,
   <br /><space />}
   },
-  <br /><space /><strong>"success"</strong>: true,
-  <br /><space /><strong>"error"</strong>: null,
-  <br /><space /><strong>"msg"</strong>: ""
+  <br /><space /><strong>"success"</strong>: boolean,
+  <br /><space /><strong>"error"</strong>: ErrorObject | null,
+  <br /><space /><strong>"msg"</strong>: string
 <br />}
 </aside>
 
-<aside class="white">
-{
-  <br /><space /><strong>"email"</strong>: string
-  <br /><space /><strong>"password"</strong>: string
-  <br /><space /><strong>"notificationToken"</strong>: string | null
-  <br />
-}
-</aside>
 
 
 
@@ -119,9 +141,9 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
 ```json
 {
   "childName": "Randy Junior",
-	"parentName": "Randy Muhroji",
+"parentName": "Randy Muhroji",
   "parentEmail": "randy@elemes.id",
-	"password": "q",
+"password": "q",
   "notificationToken": null
 }
 ```
@@ -129,20 +151,39 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
 > Example Response:
 
 ```json
+{
+  "data": {},
+  "success": true,
+  "error": null,
+  "msg": ""
+}
 
 ```
 
-### HTTP Request
+`POST /front/v2/register`
+### Request Schema
 
-`POST /front/v2/login`
+<aside class="white">
+{
+  <br /><space /><strong>"childName"</strong>: string
+  <br /><space /><strong>"parentName"</strong>: string
+  <br /><space /><strong>"parentEmail"</strong>: string
+  <br /><space /><strong>"password"</strong>: string
+  <br /><space /><strong>"notificationToken"</strong>: string | null
+  <br />
+}
+</aside>
 
-### Body
+### Response Schema
 
-Field | isRequired | Description
---------- | ------- | -----------
-email | YES
-password | YES
-notificationToken | NO 
+<aside class="white">
+{
+  <br /><space /><strong>"data"</strong>: {},
+  <br /><space /><strong>"success"</strong>: boolean,
+  <br /><space /><strong>"error"</strong>: ErrorObject | null,
+  <br /><space /><strong>"msg"</strong>: string
+<br />}
+</aside>
 
 
 
