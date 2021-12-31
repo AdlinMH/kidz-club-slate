@@ -43,15 +43,18 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
   <br /><space /><strong>"success"</strong>: boolean,
   <br /><space /><strong>"error"</strong>: ErrorObject | null,
   <br /><space /><strong>"msg"</strong>: string
-<br />}
+  <br />
+}
 </aside>
 
 ### ErrorObject Schema
 <aside class="white">
-{<br /><space /><strong>"statusCode"</strong>:?: number | string,
-<br /><space /><strong>"error"</strong>:?: string,
-<br /><space /><strong>"message"</strong>:?: string
-<br />}
+{
+  <br /><space /><strong>"statusCode"</strong>:?: number | string,
+  <br /><space /><strong>"error"</strong>:?: string,
+  <br /><space /><strong>"message"</strong>:?: string
+  <br />
+}
 </aside>
 
 
@@ -128,7 +131,8 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
   <br /><space /><strong>"success"</strong>: boolean,
   <br /><space /><strong>"error"</strong>: ErrorObject | null,
   <br /><space /><strong>"msg"</strong>: string
-<br />}
+  <br />
+}
 </aside>
 
 
@@ -141,9 +145,9 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
 ```json
 {
   "childName": "Randy Junior",
-"parentName": "Randy Muhroji",
+  "parentName": "Randy Muhroji",
   "parentEmail": "randy@elemes.id",
-"password": "q",
+  "password": "q",
   "notificationToken": null
 }
 ```
@@ -155,7 +159,7 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
   "data": {},
   "success": true,
   "error": null,
-  "msg": ""
+  "msg": "updated successfully"
 }
 
 ```
@@ -182,9 +186,61 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
   <br /><space /><strong>"success"</strong>: boolean,
   <br /><space /><strong>"error"</strong>: ErrorObject | null,
   <br /><space /><strong>"msg"</strong>: string
-<br />}
+  <br />
+}
 </aside>
 
+
+
+## PUT: ChangePass
+
+> Example Request:
+
+```json
+{
+  "currPassword": "old_xxx",
+  "newPassword": "new_yyy",
+}
+```
+
+> Example Response:
+
+```json
+{
+  "data": {},
+  "success": true,
+  "error": null,
+  "msg": "updated successfully"
+}
+
+```
+
+`PUT /front/v2/changepass`
+
+<aside class="notice">
+  Require `Authorization`
+</aside>
+### Request Schema
+
+<aside class="white">
+{
+  <br /><space /><strong>"currPassword"</strong>: string
+  <br /><space /><strong>"newPassword"</strong>: string
+  <br />
+}
+</aside>
+
+### Response Schema
+
+<aside class="white">
+{
+  <br /><space /><strong>"data"</strong>: {},
+  <br /><space /><strong>"success"</strong>: boolean,
+  <br /><space /><strong>"error"</strong>: ErrorObject | null,
+  <br /><space /><strong>"msg"</strong>: string
+  <br />
+}
+</aside>
 
 
 # Notes
