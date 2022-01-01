@@ -332,10 +332,13 @@
                   <li>
                     <a href="#post-register" class="toc-h2 toc-link" data-title="POST: Register">POST: Register</a>
                   </li>
+                  <li>
+                    <a href="#post-reset-pass" class="toc-h2 toc-link" data-title="POST: Reset Pass">POST: Reset Pass</a>
+                  </li>
+                  <li>
+                    <a href="#put-changepass" class="toc-h2 toc-link" data-title="PUT: ChangePass">PUT: ChangePass</a>
+                  </li>
               </ul>
-          </li>
-          <li>
-            <a href="#notes" class="toc-h1 toc-link" data-title="Notes">Notes</a>
           </li>
           <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
@@ -367,14 +370,17 @@
   <br /><space /><strong>"success"</strong>: boolean,
   <br /><space /><strong>"error"</strong>: ErrorObject | null,
   <br /><space /><strong>"msg"</strong>: string
-<br />}
+  <br />
+}
 </aside>
 <h3 id='errorobject-schema'>ErrorObject Schema</h3>
 <aside class="white">
-{<br /><space /><strong>"statusCode"</strong>:?: number | string,
-<br /><space /><strong>"error"</strong>:?: string,
-<br /><space /><strong>"message"</strong>:?: string
-<br />}
+{
+  <br /><space /><strong>"statusCode"</strong>:?: number | string,
+  <br /><space /><strong>"error"</strong>:?: string,
+  <br /><space /><strong>"message"</strong>:?: string
+  <br />
+}
 </aside>
 <h1 id='authentication'>Authentication</h1><h2 id='post-login'>POST: Login</h2>
 <blockquote>
@@ -436,7 +442,8 @@
   <br /><space /><strong>"success"</strong>: boolean,
   <br /><space /><strong>"error"</strong>: ErrorObject | null,
   <br /><space /><strong>"msg"</strong>: string
-<br />}
+  <br />
+}
 </aside>
 <h2 id='post-register'>POST: Register</h2>
 <blockquote>
@@ -444,9 +451,9 @@
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"childName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Randy Junior"</span><span class="p">,</span><span class="w">
-</span><span class="nl">"parentName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Randy Muhroji"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"parentName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Randy Muhroji"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"parentEmail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"randy@elemes.id"</span><span class="p">,</span><span class="w">
-</span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"q"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"q"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"notificationToken"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
@@ -457,7 +464,7 @@
   </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
   </span><span class="nl">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="nl">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="nl">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"updated successfully"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre></div>
@@ -480,26 +487,112 @@
   <br /><space /><strong>"success"</strong>: boolean,
   <br /><space /><strong>"error"</strong>: ErrorObject | null,
   <br /><space /><strong>"msg"</strong>: string
-<br />}
+  <br />
+}
 </aside>
-<h1 id='notes'>Notes</h1>
-<aside class="notice">
-Don't forget that some API needs to supplied with <code>Authorization</code>.
+<h2 id='post-reset-pass'>POST: Reset Pass</h2>
+<blockquote>
+<p>Example Request:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"randy@elemes.id"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Example Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nl">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reset form sent to your email"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div>
+<p><code>POST /front/v2/resetpass</code></p>
+
+<aside class="success">
+  Require `header: { Authorization }`
+</aside>
+<h3 id='request-schema-3'>Request Schema</h3>
+<aside class="white">
+{
+  <br /><space /><strong>"email"</strong>: string
+  <br />
+}
+</aside>
+<h3 id='response-schema-3'>Response Schema</h3>
+<aside class="white">
+{
+  <br /><space /><strong>"data"</strong>: {},
+  <br /><space /><strong>"success"</strong>: boolean,
+  <br /><space /><strong>"error"</strong>: ErrorObject | null,
+  <br /><space /><strong>"msg"</strong>: string
+  <br />
+}
+</aside>
+<h2 id='put-changepass'>PUT: ChangePass</h2>
+<blockquote>
+<p>Example Request:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"currPassword"</span><span class="p">:</span><span class="w"> </span><span class="s2">"old_xxx"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"newPassword"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new_yyy"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Example Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nl">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"updated successfully"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div>
+<p><code>PUT /front/v2/changepass</code></p>
+
+<aside class="success">
+  Require `header: { Authorization }`
+</aside>
+<h3 id='request-schema-4'>Request Schema</h3>
+<aside class="white">
+{
+  <br /><space /><strong>"currPassword"</strong>: string
+  <br /><space /><strong>"newPassword"</strong>: string
+  <br />
+}
+</aside>
+<h3 id='response-schema-4'>Response Schema</h3>
+<aside class="white">
+{
+  <br /><space /><strong>"data"</strong>: {},
+  <br /><space /><strong>"success"</strong>: boolean,
+  <br /><space /><strong>"error"</strong>: ErrorObject | null,
+  <br /><space /><strong>"msg"</strong>: string
+  <br />
+}
 </aside>
 
+<!-- # Notes
+
+<aside class="success">
+Don't forget that some API needs to supplied with <code>Authorization</code>.
+</aside>
 <aside class="success">
 Remember — a happy kitten is an authenticated kitten!
 </aside>
-
 <aside class="warning">
 Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.
 </aside>
+ -->
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
 </aside>
 
-<p>The Kittn API uses the following error codes:</p>
+<p>The KidzClub API uses the following error codes:</p>
 
 <table><thead>
 <tr>
