@@ -192,6 +192,57 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
 
 
 
+## POST: Reset Pass
+
+> Example Request:
+
+```json
+{
+  "email": "randy@elemes.id",
+}
+```
+
+> Example Response:
+
+```json
+{
+  "data": {},
+  "success": true,
+  "error": null,
+  "msg": "reset form sent to your email"
+}
+
+```
+
+`POST /front/v2/resetpass`
+
+<aside class="success">
+  Require `header: { Authorization }`
+</aside>
+
+### Request Schema
+
+<aside class="white">
+{
+  <br /><space /><strong>"email"</strong>: string
+  <br />
+}
+</aside>
+
+### Response Schema
+
+<aside class="white">
+{
+  <br /><space /><strong>"data"</strong>: {},
+  <br /><space /><strong>"success"</strong>: boolean,
+  <br /><space /><strong>"error"</strong>: ErrorObject | null,
+  <br /><space /><strong>"msg"</strong>: string
+  <br />
+}
+</aside>
+
+
+
 ## PUT: ChangePass
 
 > Example Request:
@@ -217,8 +268,8 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
 
 `PUT /front/v2/changepass`
 
-<aside class="notice">
-  Require `Authorization`
+<aside class="success">
+  Require `header: { Authorization }`
 </aside>
 ### Request Schema
 
@@ -243,9 +294,9 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
 </aside>
 
 
-# Notes
+<!-- # Notes
 
-<aside class="notice">
+<aside class="success">
 Don't forget that some API needs to supplied with <code>Authorization</code>.
 </aside>
 <aside class="success">
@@ -254,4 +305,4 @@ Remember — a happy kitten is an authenticated kitten!
 <aside class="warning">
 Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.
 </aside>
-
+ -->
