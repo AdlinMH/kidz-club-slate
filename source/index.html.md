@@ -24,6 +24,9 @@ meta:
 Welcome to the KidzClub API! You can use our API to access KidzClub API endpoints. You can view code examples in the dark area to the right.
 
 
+
+
+
 # Universal Response
 > Example Response:
 
@@ -62,7 +65,6 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
 
 
 # Authentication
-
 
 ## POST: Login
 
@@ -271,6 +273,7 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
 <aside class="success">
   Require `header: { Authorization }`
 </aside>
+
 ### Request Schema
 
 <aside class="white">
@@ -306,3 +309,161 @@ Remember — a happy kitten is an authenticated kitten!
 Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.
 </aside>
  -->
+
+# Dashboard
+
+## GET: Dashboard
+
+> Example Response:
+
+```json
+{
+  "data": {
+    "title": "Hai Mom and Dad",
+    "subtitle": "Nikmati konten webinar menarik nan seru cukup dengan 1 coin kidzclub",
+    "guide": {
+      "text": "Lihat panduan belajar",
+      "link": "https://www.youtube.com/"
+    },
+    "banners": [
+      {
+        "bannerUri": "https://www.ilmubahasainggris.com/wp-content/uploads/2017/03/NGC.jpg",
+        "onPress": {
+          "type": "in-app-navigation",
+          "screen": "detail",
+          "screenArgs": {},
+        }
+      },
+      {
+        "bannerUri": "in-app-toast",
+        "onPress": {
+          "type": "in-app-toast",
+          "text": "coming soon",
+        }
+      },
+      {
+        "bannerUri": "https://www.ilmubahasainggris.com/wp-content/uploads/2017/03/NGC.jpg",
+        "onPress": {
+          "type": "link",
+          "link": "https://www.youtube.com/"
+        }
+      }
+    ],
+    "clubCategories": [
+      {
+        "onPress": {
+          "type": "in-app-toast",
+          "text": "coming soon",
+        },
+        "iconUri": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_FUNpkbm3tJHYt4I6WjtOtdizk-LcgPi0YA&usqp=CAU",
+        "title": "category 1",
+      },
+      {
+        "onPress": {
+          "type": "in-app-toast",
+          "text": "coming soon",
+        },
+        "iconUri": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_FUNpkbm3tJHYt4I6WjtOtdizk-LcgPi0YA&usqp=CAU",
+        "title": "category 2",
+      }
+    ],
+    "todaysWebinar": {
+      "bannerUri": "https://www.ilmubahasainggris.com/wp-content/uploads/2017/03/NGC.jpg",
+      "title": "Cerita si Kancil si cerdik dan Buaya yang malang",
+      "speaker": "Ruri Sinuri",
+      "episode": "3",
+      "startTime": "123456677"
+    },
+    "upcomingWebinar": [
+      {
+        "bannerUri": "https://www.ilmubahasainggris.com/wp-content/uploads/2017/03/NGC.jpg",
+        "title": "If we synthesize the driver, we can get to the COM",
+        "titleTag": "EXCLUSIVE",
+        "clubCategory": "Club Membaca",
+        "scheduleDate": "12122433232",
+        "scheduleTime": ["15:00", "16:00"]
+      },
+      {
+        "bannerUri": "https://www.ilmubahasainggris.com/wp-content/uploads/2017/03/NGC.jpg",
+        "title": "If we synthesize the driver, we can get to the COM",
+        "titleTag": "EXCLUSIVE",
+        "clubCategory": "Club Membaca",
+        "scheduleDate": "12122433232",
+        "scheduleTime": ["15:00", "16:00"]
+      },
+    ]
+  },
+  "success": true,
+  "error": null,
+  "msg": ""
+}
+```
+
+`GET /front/v2/dashboard`
+
+<aside class="success">
+  Require `header: { Authorization }`
+</aside>
+
+<!-- ### Query Parameters -->
+
+<!-- Parameter | isRequired | Description
+--------- | ------- | -----------
+include_cats | false | If set to true, the result will also include cats. -->
+
+
+### Response Schema
+
+<aside class="white">
+{
+<br /><space /><strong>"data"</strong>: {
+<br /><space /><space /><strong>"title"</strong>: string
+<br /><space /><space /><strong>"subtitle"</strong>: string
+<br /><space /><space /><strong>"guide"</strong>: {
+<br /><space /><space /><space /><strong>"text"</strong>: string
+<br /><space /><space /><space /><strong>"link"</strong>: string
+<br /><space /><space />}
+<br /><space /><space /><strong>"banners"</strong>: [
+<br /><space /><space /><space />{
+<br /><space /><space /><space /><space /><strong>"bannerUri"</strong>: string
+<br /><space /><space /><space /><space /><strong>"onPress"</strong>: DynamicNavigationType
+<br /><space /><space /><space />},
+<br /><space /><space /><space />...
+<br /><space /><space />]
+<br /><space /><space /><strong>"clubCategories"</strong>: [
+<br /><space /><space /><space />{
+<br /><space /><space /><space /><space /><strong>"onPress"</strong>: DynamicNavigationType
+<br /><space /><space /><space /><space /><strong>"iconUri"</strong>: string
+<br /><space /><space /><space /><space /><strong>"title"</strong>: string
+<br /><space /><space /><space />},
+<br /><space /><space /><space />...
+<br /><space /><space />]
+<br /><space /><space /><strong>"todaysWebinar"</strong>: {
+<br /><space /><space /><space /><strong>"bannerUri"</strong>: string
+<br /><space /><space /><space /><strong>"title"</strong>: string
+<br /><space /><space /><space /><strong>"speaker"</strong>: string
+<br /><space /><space /><space /><strong>"episode"</strong>: string
+<br /><space /><space /><space /><strong>"startTime"</strong>: string
+<br /><space /><space />}
+<br /><space /><space /><strong>"upcomingWebinar"</strong>: [
+<br /><space /><space /><space />{
+<br /><space /><space /><space /><space /><strong>"bannerUri"</strong>: string
+<br /><space /><space /><space /><space /><strong>"clubCategory"</strong>: string
+<br /><space /><space /><space /><space /><strong>"title"</strong>: string
+<br /><space /><space /><space /><space /><strong>"titleTag"</strong>: string
+<br /><space /><space /><space /><space /><strong>"scheduleDate"</strong>: string
+<br /><space /><space /><space /><space /><strong>"scheduleTime"</strong>: string[]
+<br /><space /><space /><space />},
+<br /><space /><space /><space />...
+<br /><space /><space />]
+<br /><space />},
+<br /><space /><strong>"success"</strong>: boolean
+<br /><space /><strong>"error"</strong>: ErrorObject | null
+<br /><space /><strong>"msg"</strong>: string
+<br />
+}
+</aside>
+
+
+
+
