@@ -27,43 +27,6 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
 
 
 
-# Universal Response
-> Example Response:
-
-```json
-{
-  "data": null,
-  "success": true,
-  "error": null,
-  "msg": ""
-}
-```
-### Schema
-
-<aside class="white">
-{
-  <br /><space /><strong>"data"</strong>: any | array | object | string,
-  <br /><space /><strong>"success"</strong>: boolean,
-  <br /><space /><strong>"error"</strong>: ErrorObject | null,
-  <br /><space /><strong>"msg"</strong>: string
-  <br />
-}
-</aside>
-
-### ErrorObject Schema
-<aside class="white">
-{
-  <br /><space /><strong>"statusCode"</strong>:?: number | string,
-  <br /><space /><strong>"error"</strong>:?: string,
-  <br /><space /><strong>"message"</strong>:?: string
-  <br />
-}
-</aside>
-
-
-
-
-
 # Authentication
 
 ## POST: Login
@@ -460,6 +423,57 @@ include_cats | false | If set to true, the result will also include cats. -->
 <br /><space /><strong>"success"</strong>: boolean
 <br /><space /><strong>"error"</strong>: ErrorObject | null
 <br /><space /><strong>"msg"</strong>: string
+<br />
+}
+</aside>
+
+
+
+
+
+# Universal Response
+> Example Response:
+
+```json
+{
+  "data": null,
+  "success": true,
+  "error": null,
+  "msg": ""
+}
+```
+### Schema
+
+<aside class="white">
+{
+  <br /><space /><strong>"data"</strong>: any | array | object | string,
+  <br /><space /><strong>"success"</strong>: boolean,
+  <br /><space /><strong>"error"</strong>: ErrorObject | null,
+  <br /><space /><strong>"msg"</strong>: string
+  <br />
+}
+</aside>
+
+### ErrorObject Schema
+
+<aside class="white">
+{
+  <br /><space /><strong>"statusCode"</strong>:?: number | string,
+  <br /><space /><strong>"error"</strong>:?: string,
+  <br /><space /><strong>"message"</strong>:?: string
+  <br />
+}
+</aside>
+
+### DynamicNavigationType Schema
+
+<aside class="white">
+{
+<br /><space /><strong>"type"</strong>: 'in-app-navigation' | 'in-app-toast' | 'link'
+<br /><space /><strong>"screen"</strong>: string
+<br /><space /><strong>"screenArgs"</strong>?: any[]
+<br /><space /><strong>"link"</strong>?: string
+<br /><space /><strong>"text"</strong>?: string
 <br />
 }
 </aside>
