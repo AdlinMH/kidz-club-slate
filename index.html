@@ -341,6 +341,14 @@
               </ul>
           </li>
           <li>
+            <a href="#dashboard" class="toc-h1 toc-link" data-title="Dashboard">Dashboard</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-dashboard" class="toc-h2 toc-link" data-title="GET: Dashboard">GET: Dashboard</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
@@ -587,6 +595,152 @@ Remember — a happy kitten is an authenticated kitten!
 Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.
 </aside>
  -->
+<h1 id='dashboard'>Dashboard</h1><h2 id='get-dashboard'>GET: Dashboard</h2>
+<blockquote>
+<p>Example Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hai Mom and Dad"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subtitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nikmati konten webinar menarik nan seru cukup dengan 1 coin kidzclub"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"guide"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lihat panduan belajar"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.youtube.com/"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"banners"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"bannerUri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.ilmubahasainggris.com/wp-content/uploads/2017/03/NGC.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"onPress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in-app-navigation"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"screen"</span><span class="p">:</span><span class="w"> </span><span class="s2">"detail"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"screenArgs"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"bannerUri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in-app-toast"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"onPress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in-app-toast"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"coming soon"</span><span class="p">,</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"bannerUri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.ilmubahasainggris.com/wp-content/uploads/2017/03/NGC.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"onPress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"link"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.youtube.com/"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"clubCategories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"onPress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in-app-toast"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"coming soon"</span><span class="p">,</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"iconUri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_FUNpkbm3tJHYt4I6WjtOtdizk-LcgPi0YA&amp;usqp=CAU"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"category 1"</span><span class="p">,</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"onPress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in-app-toast"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"coming soon"</span><span class="p">,</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"iconUri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_FUNpkbm3tJHYt4I6WjtOtdizk-LcgPi0YA&amp;usqp=CAU"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"category 2"</span><span class="p">,</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"todaysWebinar"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"bannerUri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.ilmubahasainggris.com/wp-content/uploads/2017/03/NGC.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cerita si Kancil si cerdik dan Buaya yang malang"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"speaker"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ruri Sinuri"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"episode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456677"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"upcomingWebinar"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"bannerUri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.ilmubahasainggris.com/wp-content/uploads/2017/03/NGC.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"If we synthesize the driver, we can get to the COM"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"titleTag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EXCLUSIVE"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"clubCategory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Club Membaca"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"scheduleDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12122433232"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"scheduleTime"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"15:00"</span><span class="p">,</span><span class="w"> </span><span class="s2">"16:00"</span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"bannerUri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.ilmubahasainggris.com/wp-content/uploads/2017/03/NGC.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"If we synthesize the driver, we can get to the COM"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"titleTag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EXCLUSIVE"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"clubCategory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Club Membaca"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"scheduleDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12122433232"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"scheduleTime"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"15:00"</span><span class="p">,</span><span class="w"> </span><span class="s2">"16:00"</span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p><code>GET /front/v2/dashboard</code></p>
+
+<aside class="success">
+  Require `header: { Authorization }`
+</aside>
+
+<!-- ### Query Parameters -->
+
+<!-- Parameter | isRequired | Description
+--------- | ------- | -----------
+include_cats | false | If set to true, the result will also include cats. -->
+<h3 id='response-schema-5'>Response Schema</h3>
+<aside class="white">
+{
+<br /><space /><strong>"data"</strong>: {
+<br /><space /><space /><strong>"title"</strong>: string
+<br /><space /><space /><strong>"subtitle"</strong>: string
+<br /><space /><space /><strong>"guide"</strong>: {
+<br /><space /><space /><space /><strong>"text"</strong>: string
+<br /><space /><space /><space /><strong>"link"</strong>: string
+<br /><space /><space />}
+<br /><space /><space /><strong>"banners"</strong>: [
+<br /><space /><space /><space />{
+<br /><space /><space /><space /><space /><strong>"bannerUri"</strong>: string
+<br /><space /><space /><space /><space /><strong>"onPress"</strong>: DynamicNavigationType
+<br /><space /><space /><space />},
+<br /><space /><space /><space />...
+<br /><space /><space />]
+<br /><space /><space /><strong>"clubCategories"</strong>: [
+<br /><space /><space /><space />{
+<br /><space /><space /><space /><space /><strong>"onPress"</strong>: DynamicNavigationType
+<br /><space /><space /><space /><space /><strong>"iconUri"</strong>: string
+<br /><space /><space /><space /><space /><strong>"title"</strong>: string
+<br /><space /><space /><space />},
+<br /><space /><space /><space />...
+<br /><space /><space />]
+<br /><space /><space /><strong>"todaysWebinar"</strong>: {
+<br /><space /><space /><space /><strong>"bannerUri"</strong>: string
+<br /><space /><space /><space /><strong>"title"</strong>: string
+<br /><space /><space /><space /><strong>"speaker"</strong>: string
+<br /><space /><space /><space /><strong>"episode"</strong>: string
+<br /><space /><space /><space /><strong>"startTime"</strong>: string
+<br /><space /><space />}
+<br /><space /><space /><strong>"upcomingWebinar"</strong>: [
+<br /><space /><space /><space />{
+<br /><space /><space /><space /><space /><strong>"bannerUri"</strong>: string
+<br /><space /><space /><space /><space /><strong>"clubCategory"</strong>: string
+<br /><space /><space /><space /><space /><strong>"title"</strong>: string
+<br /><space /><space /><space /><space /><strong>"titleTag"</strong>: string
+<br /><space /><space /><space /><space /><strong>"scheduleDate"</strong>: string
+<br /><space /><space /><space /><space /><strong>"scheduleTime"</strong>: string[]
+<br /><space /><space /><space />},
+<br /><space /><space /><space />...
+<br /><space /><space />]
+<br /><space />},
+<br /><space /><strong>"success"</strong>: boolean
+<br /><space /><strong>"error"</strong>: ErrorObject | null
+<br /><space /><strong>"msg"</strong>: string
+<br />
+}
+</aside>
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
