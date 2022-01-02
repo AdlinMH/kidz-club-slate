@@ -370,8 +370,8 @@ Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;
 
 ### Query Parameters
 
-Parameter | isRequired | Description
---------- | ------- | -----------
+Parameter | Description
+--------- | -----------
 none |
 
 
@@ -435,6 +435,12 @@ none |
 
 ## GET: List
 
+> Example HttpRequest:
+
+```shell
+GET: {{base_url}}front/v2/webinar/list?category_ids=1,2,3,4&schedule_days=0,1,2,3
+```
+
 > Example Response:
 
 ```json
@@ -471,9 +477,10 @@ none |
 
 ### Query Parameters
 
-Parameter | isRequired | Description
---------- | ------- | -----------
-none |
+Parameter | Description
+--------- | -------
+category_ids | (optional) use for filtering by category id
+schedule_days | (optional) use for filtering by schedule days. 0 = Sunday.
 
 
 ### Response Schema
