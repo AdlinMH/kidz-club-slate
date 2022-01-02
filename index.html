@@ -346,6 +346,14 @@
               </ul>
           </li>
           <li>
+            <a href="#wallet" class="toc-h1 toc-link" data-title="Wallet">Wallet</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-coin" class="toc-h2 toc-link" data-title="GET: Coin">GET: Coin</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#universal-response" class="toc-h1 toc-link" data-title="Universal Response">Universal Response</a>
               <ul class="toc-list-h2">
                   <li>
@@ -671,13 +679,11 @@ Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>isRequired</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>none</td>
-<td></td>
 <td></td>
 </tr>
 </tbody></table>
@@ -733,6 +739,11 @@ Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;
 </aside>
 <h1 id='webinar'>Webinar</h1><h2 id='get-list'>GET: List</h2>
 <blockquote>
+<p>Example HttpRequest:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>GET: <span class="o">{{</span>base_url<span class="o">}}</span>front/v2/webinar/list?category_ids<span class="o">=</span>1,2,3,4&amp;schedule_days<span class="o">=</span>0,1,2,3
+</code></pre></div>
+<blockquote>
 <p>Example Response:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -768,14 +779,16 @@ Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>isRequired</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>none</td>
-<td></td>
-<td></td>
+<td>category_ids</td>
+<td>(optional) use for filtering by category id</td>
+</tr>
+<tr>
+<td>schedule_days</td>
+<td>(optional) use for filtering by schedule days. 0 = Sunday.</td>
 </tr>
 </tbody></table>
 <h3 id='response-schema-6'>Response Schema</h3>
@@ -792,6 +805,53 @@ Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;
 <br /><space />},
 <br /><space />...
 <br />],
+<br /><space /><strong>"success"</strong>: boolean
+<br /><space /><strong>"error"</strong>: ErrorObject | null
+<br /><space /><strong>"msg"</strong>: string
+<br />
+}
+</aside>
+<h1 id='wallet'>Wallet</h1><h2 id='get-coin'>GET: Coin</h2>
+<blockquote>
+<p>Example HttpRequest:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>GET: <span class="o">{{</span>base_url<span class="o">}}</span>front/v2/wallet/info
+</code></pre></div>
+<blockquote>
+<p>Example Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"amt"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p><code>GET /front/v2/wallet/coin</code></p>
+
+<aside class="success">
+  Require `header: { Authorization }`
+</aside>
+<h3 id='query-parameters-3'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<p>none</p>
+<h3 id='response-schema-7'>Response Schema</h3>
+<aside class="white">
+{
+<br /><space /><strong>"data"</strong>: {
+<br /><space /><space /><strong>"coin"</strong>: {
+<br /><space /><space /><space /><strong>"amt"</strong>: number
+<br /><space /><space />},
+<br /><space />},
 <br /><space /><strong>"success"</strong>: boolean
 <br /><space /><strong>"error"</strong>: ErrorObject | null
 <br /><space /><strong>"msg"</strong>: string
