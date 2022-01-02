@@ -368,11 +368,11 @@ Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;
   Require `header: { Authorization }`
 </aside>
 
-<!-- ### Query Parameters -->
+### Query Parameters
 
-<!-- Parameter | isRequired | Description
+Parameter | isRequired | Description
 --------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats. -->
+none |
 
 
 ### Response Schema
@@ -420,6 +420,77 @@ include_cats | false | If set to true, the result will also include cats. -->
 <br /><space /><space /><space />...
 <br /><space /><space />]
 <br /><space />},
+<br /><space /><strong>"success"</strong>: boolean
+<br /><space /><strong>"error"</strong>: ErrorObject | null
+<br /><space /><strong>"msg"</strong>: string
+<br />
+}
+</aside>
+
+
+
+
+
+# Webinar
+
+## GET: List
+
+> Example Response:
+
+```json
+{
+  "data": [
+  {
+    "bannerUri": "https://www.ilmubahasainggris.com/wp-content/uploads/2017/03/NGC.jpg",
+    "clubCategory": "Club Membaca",
+    "title": "If we synthesize the driver, we can get tot the COM internationalization of everything. the teorytical",
+    "titleTag": "EXCLUSIVE",
+    "scheduleDate": "Rabu, 9 September",
+    "scheduleTime": ["15:00", "16:00"]
+  },
+  {
+    "bannerUri": "https://www.ilmubahasainggris.com/wp-content/uploads/2017/03/NGC.jpg",
+    "clubCategory": "Club Membaca",
+    "title": "Try to calculate the transmitter of value between A and B",
+    "titleTag": "EPISODE 2",
+    "scheduleDate": "Rabu, 9 September",
+    "scheduleTime": ["15:00", "16:00"]
+  },
+],
+  "success": true,
+  "error": null,
+  "msg": ""
+}
+```
+
+`GET /front/v2/webinar/list`
+
+<aside class="success">
+  Require `header: { Authorization }`
+</aside>
+
+### Query Parameters
+
+Parameter | isRequired | Description
+--------- | ------- | -----------
+none |
+
+
+### Response Schema
+
+<aside class="white">
+{
+<br /><space /><strong>"data"</strong>: [
+<br /><space />{
+<br /><space /><space /><strong>"bannerUri"</strong>: string
+<br /><space /><space /><strong>"clubCategory"</strong>: string
+<br /><space /><space /><strong>"title"</strong>: string
+<br /><space /><space /><strong>"titleTag"</strong>: string
+<br /><space /><space /><strong>"scheduleDate"</strong>: string
+<br /><space /><space /><strong>"scheduleTime"</strong>: string
+<br /><space />},
+<br /><space />...
+<br />],
 <br /><space /><strong>"success"</strong>: boolean
 <br /><space /><strong>"error"</strong>: ErrorObject | null
 <br /><space /><strong>"msg"</strong>: string
