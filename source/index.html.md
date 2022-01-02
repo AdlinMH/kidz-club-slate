@@ -509,6 +509,62 @@ schedule_days | (optional) use for filtering by schedule days. 0 = Sunday.
 
 
 
+# Wallet
+
+## GET: Coin
+
+> Example HttpRequest:
+
+```shell
+GET: {{base_url}}front/v2/wallet/info
+```
+
+> Example Response:
+
+```json
+{
+  "data": {
+    "amt": 10,
+  },
+  "success": true,
+  "error": null,
+  "msg": ""
+}
+```
+
+`GET /front/v2/wallet/coin`
+
+<aside class="success">
+  Require `header: { Authorization }`
+</aside>
+
+### Query Parameters
+
+Parameter | Description
+--------- | -------
+none
+
+
+### Response Schema
+
+<aside class="white">
+{
+<br /><space /><strong>"data"</strong>: {
+<br /><space /><space /><strong>"coin"</strong>: {
+<br /><space /><space /><space /><strong>"amt"</strong>: number
+<br /><space /><space />},
+<br /><space />},
+<br /><space /><strong>"success"</strong>: boolean
+<br /><space /><strong>"error"</strong>: ErrorObject | null
+<br /><space /><strong>"msg"</strong>: string
+<br />
+}
+</aside>
+
+
+
+
+
 # Universal Response
 > Example Response:
 
