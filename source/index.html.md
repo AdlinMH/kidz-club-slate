@@ -62,8 +62,7 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
     }
   },
   "success": true,
-  "error": null,
-  "msg": ""
+  "error": null
 }
 ```
 
@@ -95,7 +94,6 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
   },
   <br /><space /><strong>"success"</strong>: boolean,
   <br /><space /><strong>"error"</strong>: ErrorObject | null,
-  <br /><space /><strong>"msg"</strong>: string
   <br />
 }
 </aside>
@@ -124,7 +122,6 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
   "data": {},
   "success": true,
   "error": null,
-  "msg": "updated successfully"
 }
 
 ```
@@ -150,7 +147,6 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
   <br /><space /><strong>"data"</strong>: {},
   <br /><space /><strong>"success"</strong>: boolean,
   <br /><space /><strong>"error"</strong>: ErrorObject | null,
-  <br /><space /><strong>"msg"</strong>: string
   <br />
 }
 </aside>
@@ -174,7 +170,6 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
   "data": {},
   "success": true,
   "error": null,
-  "msg": "reset form sent to your email"
 }
 
 ```
@@ -201,7 +196,6 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
   <br /><space /><strong>"data"</strong>: {},
   <br /><space /><strong>"success"</strong>: boolean,
   <br /><space /><strong>"error"</strong>: ErrorObject | null,
-  <br /><space /><strong>"msg"</strong>: string
   <br />
 }
 </aside>
@@ -226,7 +220,6 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
   "data": {},
   "success": true,
   "error": null,
-  "msg": "updated successfully"
 }
 
 ```
@@ -254,7 +247,6 @@ Welcome to the KidzClub API! You can use our API to access KidzClub API endpoint
   <br /><space /><strong>"data"</strong>: {},
   <br /><space /><strong>"success"</strong>: boolean,
   <br /><space /><strong>"error"</strong>: ErrorObject | null,
-  <br /><space /><strong>"msg"</strong>: string
   <br />
 }
 </aside>
@@ -357,8 +349,7 @@ Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;
     ]
   },
   "success": true,
-  "error": null,
-  "msg": ""
+  "error": null
 }
 ```
 
@@ -422,7 +413,6 @@ none |
 <br /><space />},
 <br /><space /><strong>"success"</strong>: boolean
 <br /><space /><strong>"error"</strong>: ErrorObject | null
-<br /><space /><strong>"msg"</strong>: string
 <br />
 }
 </aside>
@@ -464,8 +454,7 @@ GET: {{base_url}}front/v2/webinar/list?category_ids=1,2,3,4&schedule_days=0,1,2,
   },
 ],
   "success": true,
-  "error": null,
-  "msg": ""
+  "error": null
 }
 ```
 
@@ -500,63 +489,6 @@ schedule_days | (optional) use for filtering by schedule days. 0 = Sunday.
 <br />],
 <br /><space /><strong>"success"</strong>: boolean
 <br /><space /><strong>"error"</strong>: ErrorObject | null
-<br /><space /><strong>"msg"</strong>: string
-<br />
-}
-</aside>
-
-
-
-
-
-# Wallet
-
-## GET: Coin
-
-> Example HttpRequest:
-
-```shell
-GET: {{base_url}}front/v2/wallet/info
-```
-
-> Example Response:
-
-```json
-{
-  "data": {
-    "amt": 10,
-  },
-  "success": true,
-  "error": null,
-  "msg": ""
-}
-```
-
-`GET /front/v2/wallet/coin`
-
-<aside class="success">
-  Require `header: { Authorization }`
-</aside>
-
-### Query Parameters
-
-Parameter | Description
---------- | -------
-none
-
-
-### Response Schema
-
-<aside class="white">
-{
-<br /><space /><strong>"data"</strong>: {
-<br /><space /><space /><strong>"coin"</strong>: {
-<br /><space /><space /><space /><strong>"amt"</strong>: number
-<br /><space /><space />},
-<br /><space />},
-<br /><space /><strong>"success"</strong>: boolean
-<br /><space /><strong>"error"</strong>: ErrorObject | null
-<br /><space /><strong>"msg"</strong>: string
 <br />
 }
 </aside>
@@ -572,18 +504,16 @@ none
 {
   "data": null,
   "success": true,
-  "error": null,
-  "msg": ""
+  "error": null
 }
 ```
-### Schema
+### HTTP Response Schema
 
 <aside class="white">
 {
   <br /><space /><strong>"data"</strong>: any | array | object | string,
   <br /><space /><strong>"success"</strong>: boolean,
   <br /><space /><strong>"error"</strong>: ErrorObject | null,
-  <br /><space /><strong>"msg"</strong>: string
   <br />
 }
 </aside>
@@ -592,8 +522,7 @@ none
 
 <aside class="white">
 {
-  <br /><space /><strong>"statusCode"</strong>:?: number | string,
-  <br /><space /><strong>"error"</strong>:?: string,
+  <br /><space /><strong>"code"</strong>:?: number,
   <br /><space /><strong>"message"</strong>:?: string
   <br />
 }
@@ -603,7 +532,7 @@ none
 
 <aside class="white">
 {
-<br /><space /><strong>"type"</strong>: 'in-app-navigation' | 'in-app-toast' | 'link'
+<br /><space /><strong>"type"</strong>: 'in-app-navigation' | 'in-app-toast' | 'web-link'
 <br /><space /><strong>"screen"</strong>: string
 <br /><space /><strong>"screenArgs"</strong>?: any[]
 <br /><space /><strong>"link"</strong>?: string
